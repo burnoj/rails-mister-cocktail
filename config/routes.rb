@@ -9,3 +9,7 @@ Rails.application.routes.draw do
   #   resources :ingredients
   # end
 end
+
+# routes
+# controller
+# view
