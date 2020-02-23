@@ -1,14 +1,68 @@
-<h2>Add new Cocktail</h2>
+<!-- * ------- Navbar --------- * -->
 
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <img src="https://www.620state.com/wp-content/uploads/2016/09/circle-logo-black-white-500.png" />
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to 'Home', cocktails_path, class: 'nav-link' %>
+      </li>
+    </ul>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+<div class="new_image" style="background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.3) 50%),
+  url('https://unsplash.it/1000/500?random');
+  background-size: cover; min-height: calc(100vh - 166px);">
+</div>
+
+<h2 class="show-text">Add new Cocktail</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+
+    </div>
+    <div class="col-sm-6">
+      <%= simple_form_for(@cocktail) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <div class="form-inputs">
+          <%= f.input :name %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-sm-3">
+
+    </div>
   </div>
-<% end %>
+</div>
+
+
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+  </div>
+</div>
+
